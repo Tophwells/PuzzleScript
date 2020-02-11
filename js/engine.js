@@ -2225,6 +2225,13 @@ function calculateRowColMasks() {
 
 /* returns a bool indicating if anything changed */
 function processInput(dir,dontDoWin,dontModify) {
+	/* possible values of dir:
+	-1: nothing (e.g. againing, or run_rules_on_level_start, or a realtime tick)
+	0: up
+	1: left
+	2: right
+	3: down
+	4: action*/
 	againing = false;
 
 	if (verbose_logging) { 
